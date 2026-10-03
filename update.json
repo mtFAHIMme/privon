@@ -1,0 +1,12 @@
+{
+    "version_code": 1,
+    "version_name": "1.0.0",
+    "size": "4.9 MB",
+    "download_url": "https://github.com/mtFAHIMme/privon/releases/latest/download/Privon.apk",
+    "site_download_url": "https://mtFAHIMme.github.io/privon/#download",
+    "action": "open_site",
+    "action_description": "open_site: open the site_download_url to the browser; download: directly download with in-app downloader (app default action: download)",
+    "changelog": "",
+    "force_update": false,
+    "release_date": "2026-10-3"
+}

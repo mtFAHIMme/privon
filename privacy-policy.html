@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy — Privon</title>
+<meta name="description" content="Privon's privacy policy: the app declares zero permissions, collects no data, and never transmits your files or passwords. Encryption happens entirely on your device." />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#0c0918" />
+<meta property="og:title" content="Privacy Policy — Privon" />
+<meta property="og:description" content="Privon has no internet permission, collects nothing, and processes every file locally. Here's exactly what that means." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://mtfahimme.github.io/privon/privacy-policy.html" />
+
+<link rel="icon" href="https://mtfahimme.github.io/privon/asset/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://mtfahimme.github.io/privon/privacy-policy.html">
+
+<style>
+  :root{
+    --bg:#0c0918;
+    --fg:#f6f4ff;
+    --muted:#a89fc9;
+    --muted-dim:#7a7196;
+    --accent:#6D4AFF;
+    --accent-2:#7D5EFF;
+    --accent-soft:#A78BFF;
+    --green:#5ee0a0;
+    --green-soft:#8ef0bb;
+    --card:rgba(255,255,255,0.04);
+    --border:rgba(255,255,255,0.09);
+    --shadow:0 20px 60px rgba(5,3,15,.5);
+    --radius:14px;
+    --mono:'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    --display:'Sora', system-ui, sans-serif;
+    --body:'Inter', system-ui, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;overflow-x:hidden;}
+  html,body{height:100%;}
+  body{margin:0;font-family:var(--body);color:var(--fg);background:var(--bg);-webkit-font-smoothing:antialiased;}
+  a{color:inherit;text-decoration:none;}
+  .container{width:100%;max-width:780px;margin:0 auto;padding:0 32px;}
+
+  .bg-glow{
+    position:fixed;inset:0;z-index:-1;pointer-events:none;
+    background:
+      radial-gradient(closest-side, rgba(109,74,255,.24), rgba(109,74,255,.24) 35%, transparent 100%) -10% -15% / 65vw 65vw no-repeat,
+      radial-gradient(closest-side, rgba(125,94,255,.15), rgba(125,94,255,.15) 35%, transparent 100%) 110% 0% / 55vw 55vw no-repeat,
+      var(--bg);
+  }
+
+  /* ---------- header ---------- */
+  header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(1.3) blur(12px);background:color-mix(in oklab, var(--bg) 78%, transparent);border-bottom:1px solid var(--border);}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px;min-height:64px;gap:10px;flex-wrap:nowrap;}
+  .brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:18px;flex:none;letter-spacing:-.01em;}
+  .brand .mark{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,var(--accent),var(--accent-soft));display:grid;place-items:center;color:#fff;box-shadow:var(--shadow);}
+  .brand .mark svg{width:17px;height:17px;}
+  .back{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:12.5px;color:var(--muted);border:1px solid var(--border);background:var(--card);padding:7px 12px;border-radius:999px;white-space:nowrap;flex:none;}
+  .back svg{width:13px;height:13px;flex:none;}
+  .back:hover{color:var(--fg);}
+
+  main{position:relative;z-index:1;}
+
+  /* ---------- hero ---------- */
+  .hero{padding-top:72px;padding-bottom:12px;}
+  .eyebrow{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-soft);margin:0 0 18px;display:flex;align-items:center;gap:10px;}
+  .eyebrow::before{content:'';width:22px;height:1px;background:var(--accent-soft);}
+  h1{font-family:var(--display);font-weight:800;font-size:clamp(30px,5.4vw,44px);line-height:1.12;letter-spacing:-.025em;margin:0 0 18px;}
+  h1 .accent{
+    background:linear-gradient(135deg,#ffffff 0%, var(--accent-soft) 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .meta{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0 0;}
+  .meta span{font-family:var(--mono);font-size:12px;color:var(--muted-dim);border:1px solid var(--border);background:var(--card);padding:5px 10px;border-radius:999px;}
+  .lede{font-size:16px;line-height:1.7;color:var(--muted);max-width:620px;margin:24px 0 0;}
+  .lede b{color:var(--fg);font-weight:600;}
+
+  /* ---------- tldr banner ---------- */
+  .tldr{
+    margin-top:36px;
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:18px;
+    align-items:flex-start;
+    background:linear-gradient(135deg, rgba(109,74,255,.14), rgba(125,94,255,.06));
+    border:1px solid rgba(109,74,255,.32);
+    border-radius:18px;
+    padding:24px 26px;
+  }
+  .tldr-icon{
+    width:42px;height:42px;border-radius:11px;
+    background:rgba(109,74,255,.22);
+    border:1px solid rgba(109,74,255,.35);
+    display:grid;place-items:center;
+    color:var(--accent-soft);
+    flex:none;
+  }
+  .tldr-icon svg{width:20px;height:20px;}
+  .tldr h2{
+    font-family:var(--display);font-size:17px;font-weight:700;
+    margin:0 0 10px;letter-spacing:-.005em;
+  }
+  .tldr ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px;line-height:1.85;}
+  .tldr li b{color:var(--fg);font-weight:600;}
+  .tldr li:last-child{margin-bottom:0;}
+
+  /* ---------- policy section ---------- */
+  .section{padding-top:56px;padding-bottom:72px;}
+  .policy{display:flex;flex-direction:column;gap:14px;}
+  .policy-card{
+    background:var(--card);border:1px solid var(--border);
+    border-radius:var(--radius);padding:26px 28px;
+    transition:border-color .2s ease;
+  }
+  .policy-card:hover{border-color:color-mix(in srgb, var(--accent-soft) 35%, var(--border));}
+  .policy-card .num{
+    font-family:var(--mono);font-size:11px;letter-spacing:.14em;
+    color:var(--accent-soft);margin:0 0 10px;text-transform:uppercase;
+  }
+  .policy-card h2{font-family:var(--display);font-size:19px;font-weight:700;margin:0 0 12px;letter-spacing:-.005em;}
+  .policy-card p{font-size:14.5px;line-height:1.75;color:var(--muted);margin:0 0 12px;}
+  .policy-card p:last-child{margin-bottom:0;}
+  .policy-card ul{margin:0 0 12px;padding-left:20px;color:var(--muted);font-size:14.5px;line-height:1.85;}
+  .policy-card ul:last-child{margin-bottom:0;}
+  .policy-card li b, .policy-card p b{color:var(--fg);font-weight:600;}
+  .policy-card code{
+    font-family:var(--mono);font-size:13px;
+    background:rgba(255,255,255,.06);border:1px solid var(--border);
+    padding:2px 6px;border-radius:5px;color:var(--accent-soft);
+  }
+  .policy-card.warn{
+    border-color:rgba(255,180,84,.28);
+    background:linear-gradient(135deg, rgba(255,180,84,.055), rgba(109,74,255,.04));
+  }
+  .policy-card.warn h2{color:#ffc978;}
+
+  /* ---------- contact box ---------- */
+  .contact-box{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:14px;flex-wrap:wrap;margin-top:16px;
+  }
+  .mail-btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:11px 18px;border-radius:10px;
+    background:linear-gradient(135deg,var(--accent),var(--accent-soft));
+    color:#fff;font-weight:600;font-size:13.5px;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .mail-btn:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(109,74,255,.42);}
+  .mail-btn svg{width:15px;height:15px;flex:none;}
+
+  /* ---------- footer ---------- */
+  footer{border-top:1px solid var(--border);padding:28px 0 36px;color:var(--muted-dim);font-size:13px;}
+  .foot-row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center;}
+  .pill{
+    display:inline-flex;gap:8px;align-items:center;
+    border:1px solid var(--border);background:var(--card);
+    padding:7px 12px;border-radius:999px;
+    font-size:12.5px;color:var(--muted);font-family:var(--mono);
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width:640px){
+    .container{padding-left:22px;padding-right:22px;}
+    .policy-card{padding:22px;}
+    .tldr{grid-template-columns:1fr;gap:14px;padding:22px;}
+    .tldr-icon{width:38px;height:38px;}
+  }
+  @media (max-width:420px){
+    .brand{font-size:16px;gap:8px;}
+    .brand .mark{width:28px;height:28px;}
+    .brand .mark svg{width:15px;height:15px;}
+  }
+  @media (max-height:500px) and (orientation:landscape){
+    .nav{min-height:52px;padding-top:10px;padding-bottom:10px;}
+    .hero{padding-top:96px;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .policy-card,.mail-btn{transition:none;}
+  }
+</style>
+</head>
+<body>
+<div class="bg-glow" aria-hidden="true"></div>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4" y="11" width="16" height="10" rx="2"/>
+          <path d="M8 11V8a4 4 0 0 1 8 0v3"/>
+        </svg>
+      </span>
+      Privon
+    </div>
+    <a class="back" href="index.html">
+      <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+      Back to app
+    </a>
+  </div>
+</header>
+
+<main>
+  <section class="hero container">
+    <p class="eyebrow">Privacy Policy</p>
+    <h1>Your files stay <span class="accent">yours</span>.</h1>
+    <div class="meta">
+      <span>Effective: October 3, 2026</span>
+      <span>Applies to: Privon for Android</span>
+    </div>
+    <p class="lede">Privon is built on one rule: <b>your files never leave your device.</b> The app declares no permissions, collects nothing, and has no way to transmit anything even if it wanted to. This page spells out exactly what that means.</p>
+
+    <div class="tldr">
+      <div class="tldr-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3Z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+      </div>
+      <div>
+        <h2>The short version</h2>
+        <ul>
+          <li>Privon declares <b>0 permissions</b> in its manifest — no internet, no storage access.</li>
+          <li>Your <b>files, filenames, and passwords</b> are never collected, logged, or transmitted.</li>
+          <li>Encryption and decryption happen <b>entirely on your device</b>, in memory.</li>
+          <li>There are <b>no ads, no analytics, and no third-party SDKs</b> of any kind.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="policy">
+
+      <div class="policy-card">
+        <p class="num">01 — Information we collect</p>
+        <h2>Nothing</h2>
+        <p>Privon has no accounts, no sign-in, and no server. There is no backend to collect data on, and no place for data to be stored even if collection were attempted. Every feature — selecting files, entering a password, encrypting, decrypting — happens locally.</p>
+      </div>
+
+      <div class="policy-card">
+        <p class="num">02 — How your files are handled</p>
+        <h2>Read, encrypted, written back — all on-device</h2>
+        <p>When you pick files, Android's Storage Access Framework hands Privon temporary read access to exactly the files you chose — nothing else on your device becomes visible to the app. Each file is streamed through the cipher in your device's memory and written back out as a new encrypted file in the folder you select.</p>
+        <p>Nothing is copied to a cache, uploaded, or retained after the operation finishes. Once you leave the screen, Privon is holding nothing.</p>
+      </div>
+
+      <div class="policy-card">
+        <p class="num">03 — How your passwords are handled</p>
+        <h2>Used, stretched, discarded</h2>
+        <p>Your password exists only in the app's memory long enough to be stretched into an encryption key through PBKDF2. It is never written to disk, never stored in preferences, and never cached in any form. When the encryption or decryption completes, the password and the derived key are cleared from memory.</p>
+      </div>
+
+      <div class="policy-card">
+        <p class="num">04 — Device permissions</p>
+        <h2>Zero, by design</h2>
+        <p>Privon's manifest declares no permissions at all. Not <code>INTERNET</code>, not <code>READ_EXTERNAL_STORAGE</code>, not anything else. This means:</p>
+        <ul>
+          <li>Uploading your files or passwords is <b>technically impossible</b> — the OS itself would block the attempt.</li>
+          <li>The app cannot see any file on your device except the ones you explicitly hand it through the system file picker.</li>
+          <li>There is no analytics SDK, no crash reporter, and no ad library silently requesting its own permissions.</li>
+        </ul>
+      </div>
+
+      <div class="policy-card">
+        <p class="num">05 — Third-party services</p>
+        <h2>None</h2>
+        <p>Privon does not integrate any third-party service, advertising network, or analytics SDK. There is nothing embedded in the app that contacts the outside world, because there is no permission for it to do so.</p>
+      </div>
+
+      <div class="policy-card warn">
+        <p class="num">06 — Password loss</p>
+        <h2>No recovery is possible — by design</h2>
+        <p>Because Privon never sends, stores, or backs up your password, there is no recovery service, no reset link, and no way for anyone — including us — to unlock a file if the password is lost or forgotten. The files encrypted with that password <b>cannot be recovered</b>.</p>
+        <p>This is not a limitation we can fix without breaking the app's privacy promise. Store your passwords somewhere safe before you encrypt anything important.</p>
+      </div>
+
+      <div class="policy-card">
+        <p class="num">07 — Cross-device notes</p>
+        <h2>What happens between old and new phones</h2>
+        <p>Android only supports SHA-256 for PBKDF2 from Android 8.0 (API 26) onward. Privon detects this and picks the appropriate hash for your device, recording the choice inside the encrypted file itself.</p>
+        <p>The practical effect: files encrypted on Android 7.1 or older decrypt fine on Android 8+, but files encrypted on Android 8+ cannot be decrypted on Android 7.1 or older — those devices simply cannot compute SHA-256 in PBKDF2. Privon reports a clear error rather than failing silently.</p>
+      </div>
+
+      <div class="policy-card">
+        <p class="num">08 — Children's privacy</p>
+        <h2>No data means no data from anyone</h2>
+        <p>Since Privon collects nothing from any user, there is no personal information to collect from children either. The app is safe for users of any age from a data-privacy standpoint.</p>
+      </div>
+
+      <div class="policy-card">
+        <p class="num">09 — Changes to this policy</p>
+        <h2>Updated here first</h2>
+        <p>If a future version of Privon ever needed to handle data differently — for example, if a new feature required a new permission — this page would be updated before that version shipped, with a new effective date at the top.</p>
+      </div>
+
+      <div class="policy-card">
+        <p class="num">10 — Contact</p>
+        <h2>Questions about this policy</h2>
+        <p>If anything here is unclear, or you want to know more about how Privon handles (or refuses to handle) your data, reach out directly.</p>
+        <div class="contact-box">
+          <a class="mail-btn" href="mailto:mt.fahim@outlook.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="5" width="18" height="14" rx="2"/>
+              <path d="m3 7 9 6 9-6"/>
+            </svg>
+            Email the developer
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container foot-row">
+    <div>© <span id="year"></span> Privon. All rights reserved.</div>
+    <a href="mailto:mt.fahim@outlook.com" class="pill">Contact</a>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
