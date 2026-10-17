@@ -1,12 +1,12 @@
 {
-    "version_code": 1,
-    "version_name": "1.0.0",
-    "size": "4.9 MB",
+    "version_code": 2,
+    "version_name": "2.0.0",
+    "size": "5 MB",
     "download_url": "https://github.com/mtFAHIMme/privon/releases/latest/download/Privon.apk",
     "site_download_url": "https://mtFAHIMme.github.io/privon/#download",
     "action": "open_site",
     "action_description": "open_site: open the site_download_url to the browser; download: directly download with in-app downloader (app default action: download)",
-    "changelog": "",
+    "changelog": "- Completely redesigned the app\n- Fixed file deletion issues when changing screen orientation\n- Fixed various bugs and improved overall performance\n- Added Bengali language support\n- Added Android 17 support",
     "force_update": false,
-    "release_date": "2026-10-3"
+    "release_date": "2026-10-17"
 }

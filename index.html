@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Privon — Offline File Encryption for Android</title>
 <meta name="description" content="Privon (PrivacyON) is a free, ad-free, fully offline Android file encryption tool. AES-256-GCM with PBKDF2 key derivation, unique salt and nonce per file, batch processing, and zero manifest permissions." />
-<meta name="keywords" content="Privon, Privon app, PrivacyON, file encryption app, AES-256-GCM, PBKDF2, encrypt files Android, offline encryption, no permission app, secure file encryptor, decrypt files" />
+<meta name="keywords" content="Privon, PrivacyON, mtApps, mtPrivon, file encryption app, AES-256-GCM, offline encryption, secure file encryptor" />
 <meta name="robots" content="index, follow" />
 <meta name="theme-color" content="#0c0918" />
 <meta property="og:title" content="Privon — Offline File Encryption for Android" />
@@ -278,15 +278,15 @@
     border-radius:20px;overflow:hidden;
     background:linear-gradient(150deg,#241d43,#130f24);
     border:1px solid var(--border);
-    position:relative;aspect-ratio:9/16;
+    position:relative;/*aspect-ratio:9/16;*/
     box-shadow:0 14px 46px rgba(0,0,0,.45);
     width:100%;max-width:360px;margin:0 auto;
     cursor:zoom-in;
     transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
   }
   .frame:hover{transform:translateY(-3px);border-color:color-mix(in srgb, var(--accent-soft) 48%, var(--border));box-shadow:0 20px 56px rgba(0,0,0,.55);}
-  .frame img{width:100%;height:100%;display:block;object-fit:cover;object-position:center top;}
-  .frame .placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;color:var(--muted);font-family:var(--mono);font-size:12.5px;text-align:center;padding:24px;line-height:1.6;background:repeating-linear-gradient(135deg, rgba(255,255,255,.03) 0 10px, transparent 10px 20px);}
+  .frame img{width:100%;height:auto;display:block;object-fit:contain;}
+  .frame .placeholder{position:relative;aspect-ratio:9/16;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;color:var(--muted);font-family:var(--mono);font-size:12.5px;text-align:center;padding:24px;line-height:1.6;background:repeating-linear-gradient(135deg, rgba(255,255,255,.03) 0 10px, transparent 10px 20px);}
   .frame .placeholder b{color:var(--accent-soft);font-size:26px;}
 
   .dots{display:flex;gap:8px;justify-content:center;padding:16px 8px 0;}
@@ -805,13 +805,13 @@ document.addEventListener('DOMContentLoaded', () => {
 /* ---------- Screenshot carousel + lightbox ---------- */
 (function(){
   const SCREENSHOTS = [
-    { src: 'asset/screenshots/home.png',     alt: 'Privon – Home screen' }/*,
-    { src: 'asset/screenshots/encrypt.jpg',  alt: 'Privon – Encrypt files' },
-    { src: 'asset/screenshots/password.jpg', alt: 'Privon – Password entry' },
-    { src: 'asset/screenshots/progress.jpg', alt: 'Privon – Encrypting files' },
-    { src: 'asset/screenshots/decrypt.jpg',  alt: 'Privon – Decrypt files' },
-    { src: 'asset/screenshots/about.jpg',    alt: 'Privon – About screen' }
-  */];
+    { src: 'asset/screenshots/1.jpg',     alt: 'Privon – Home screen' },
+    { src: 'asset/screenshots/2.jpg',  alt: 'Privon – Selected files' },
+    { src: 'asset/screenshots/3.jpg', alt: 'Privon – Password entry' },
+    { src: 'asset/screenshots/4.jpg', alt: 'Privon – Encrypting files' },
+    { src: 'asset/screenshots/5.jpg',  alt: 'Privon – Results' },
+    { src: 'asset/screenshots/6.jpg',    alt: 'Privon – Settings' }
+  ];
 
   const track = document.getElementById('track');
   const dotsWrap = document.getElementById('dots');
